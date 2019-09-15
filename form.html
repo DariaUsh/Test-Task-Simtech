@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="styles/form.css">		
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div class="form container">
+			<div class="logo">
+				<img src="image/logo.jpg" alt="Logo" width="250"/>
+			</div>
+			<div class="checkout">
+				<h2>Checkout</h2>			
+				<div class="products">
+					<h3>Products</h3>
+					<div class="product__item row">
+						<div class="product__item-name col-10">
+						  <a href="#">Apple&#174; - iPad&#174; with Retina&#174; display Wi-Fi - 32GB - White</a>
+						</div>
+						<div class="product__item-price col-2">
+						  $499.00
+						</div>
+					</div>
+					<div class="product__item row">
+						<div class="product__item-name col-10">
+						  <a href="#">16GB A Series Walkman Video MP3</a>
+						</div>
+						<div class="product__item-price col-2">
+						  $130.00
+						</div>
+					</div>
+				</div>	
+				
+				<div class="shipping">
+					<h3>Shipping method</h3>
+				  <div class="shipping__item row">
+					<div class="product__item-name col-10">
+					  <span>FedEx</span>
+					</div>
+					<div class="product__item-price col-2">
+					  $13.99
+					</div>
+				  </div>
+				</div>
+				
+				<form>
+					<div class="payment">
+						<h3>Payment method</h3>	
+						<ul class="payment__tab nav nav-pills">
+							<li class="nav-item">
+								<a class="nav-link active" data-toggle="tab" href="#creditCard">Credit card</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#giftCard">Gift card</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#payPal">PayPal</a>
+							</li>
+						</ul>				 
+						<div class="payment__tab-content tab-content">
+							<div class="payment__tab-pane tab-pane fade show active" id="creditCard">
+								<div class="payment__form">
+									<div class="payment__form-inputs">
+										<div class="payment__form-input-card-number">
+											<label>Card number<span>*</span></label>
+											<div class="payment__input-icon">
+												<input type="text" value="" maxlength="19" required/>
+												<img src="image/icon.png" width="50"/>
+											</div>
+										</div>
+										<div class="payment__form-input-valid-thru">
+											<label>Valid thru (mm/yy)<span>*</span></label>
+											<div>
+												<input type="text" id="mm" value="" maxlength="2" required/>
+												<span>&nbsp;/&nbsp;</span>
+												<input type="text" id="yy" value="" maxlength="2" required/>
+											</div>								
+										</div>
+										<div class="payment__form-input-name">
+											<label>Cardholder's name<span>*</span></label>
+											<input type="text" value="" required/>
+										</div>
+									</div>
+									<div class="payment__form-code">
+										<label>CVV/CVC<span>*</span></label>
+										<div class="payment__input-icon">
+											<input type="text"  maxlength="3" required/>
+											<div class="payment__input-icon-hint">
+												<img src="image/icon-hint.png" width="25"/>											
+												<div class="tooltip-content">
+													<img src="image/codeLoc.jpg" width='220' />
+												</div>
+											</div>										
+										</div>
+									</div>
+								</div>						
+							</div>
+							<div class="payment__tab-pane tab-pane fade" id="giftCard">Gift card</div>
+							<div class="payment__tab-pane tab-pane fade" id="payPal">PayPal</div>
+						</div>
+					</div>	
+					
+					<div class="accept-agreements">
+						<input type="checkbox" required/>
+						<label>I accept the <a href="#">Terms and Conditions</a></label>
+					</div>
+					
+					<button type="submit" class="place-order btn btn-lg">Place order</button>
+				</form>
+			</div>
+		</div>
+		
+		<div class="terms-conditions modal fade" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Terms and Conditions</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et libero mauris. Pellentesque facilisis et purus ut gravida. Nullam laoreet justo sit amet lorem dapibus, ac mattis dui euismod. Morbi ultrices aliquam ante nec sagittis. Vestibulum fringilla porttitor nisl, at fermentum sem convallis at. Phasellus sed purus tempus est convallis dictum. Curabitur pharetra sapien nec leo faucibus, ut aliquet arcu auctor. Aliquam lacus eros, pretium feugiat ullamcorper id, scelerisque non urna. Sed commodo, lorem vel pharetra eleifend, nisl sapien eleifend eros, vitae suscipit dolor libero in est. Nunc vel est pharetra, rutrum dolor non, feugiat tellus. Phasellus nec consequat nulla. Cras tempor sapien non enim aliquet sollicitudin. Ut posuere est elementum nisi dictum, vel consequat diam elementum. Aliquam erat volutpat. Pellentesque non arcu dolor. Morbi sit amet ligula non purus scelerisque maximus.
+						</p>
+						<p>
+							Mauris molestie nibh non sem sollicitudin, non ullamcorper enim lobortis. Curabitur eget malesuada augue, ut cursus massa. Nulla nibh elit, bibendum eu diam ut, porta pellentesque augue. Nunc scelerisque nisi vitae turpis tempor luctus. Vestibulum egestas molestie tortor et dictum. Sed in gravida sapien. Proin porttitor mauris posuere augue feugiat, ut malesuada mi blandit. Nunc eget lacus ultrices, auctor massa ut, pulvinar magna.
+						</p>
+						<p>
+							Sed porta leo ac mattis tempor. Mauris congue, enim in fermentum placerat, nulla ante gravida metus, at mattis urna purus ut est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sit amet lacus porttitor, suscipit mauris volutpat, ultricies nunc. Fusce gravida sit amet nisl a tincidunt. Aliquam mattis, tortor finibus porttitor porttitor, nisi turpis suscipit lectus, nec auctor est ex at magna. Curabitur vitae ipsum vestibulum, iaculis nisi sit amet, luctus metus. Praesent fringilla mollis massa, et dictum orci imperdiet id. Mauris sed ligula quis orci elementum aliquam. Pellentesque at ipsum pulvinar, sodales lacus non, vestibulum sem.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="scripts/form.js" type="text/javascript"></script>
+</html>
