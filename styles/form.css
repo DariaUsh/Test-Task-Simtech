@@ -1,72 +1,79 @@
-.form {
-  max-width: 800px;
-  font-size: 18px;
-  padding: 10px 0px 60px 0px;
-}
-.form .logo {
+.text-center {
   text-align: center;
-  margin-bottom: 10%;
 }
-.form .checkout h2 {
-  margin-bottom: 40px;
-}
-.form .checkout h3 {
-  margin-bottom: 30px;
-}
-.form .checkout .products, .form .checkout .shipping {
-  margin-bottom: 25px;
-}
-.form .checkout .products .product__item .col-2, .form .checkout .products .shipping__item .col-2, .form .checkout .shipping .product__item .col-2, .form .checkout .shipping .shipping__item .col-2 {
+
+.text-right {
   text-align: right;
 }
-.form .checkout .products .product__item .col-10, .form .checkout .products .shipping__item .col-10, .form .checkout .shipping .product__item .col-10, .form .checkout .shipping .shipping__item .col-10 {
+
+.text-left {
   text-align: left;
 }
-.form .checkout .products .product__item .col-10 a, .form .checkout .products .shipping__item .col-10 a, .form .checkout .shipping .product__item .col-10 a, .form .checkout .shipping .shipping__item .col-10 a {
-  padding-left: 20px;
+
+.text-by-width {
+  text-align: justify;
 }
-.form .checkout .products .product__item .col-10 span, .form .checkout .products .shipping__item .col-10 span, .form .checkout .shipping .product__item .col-10 span, .form .checkout .shipping .shipping__item .col-10 span {
-  padding-left: 20px;
+
+.h2 {
+  margin-bottom: 40px;
 }
-.form .checkout .payment {
+
+.h3 {
   margin-bottom: 30px;
 }
-.form .checkout .payment .payment__tab {
+
+.div_indent {
+  margin-bottom: 25px;
+}
+
+.internal-intend-left {
+  padding-left: 20px;
+}
+
+.payment__tab {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 20px;
 }
-.form .checkout .payment .payment__tab li {
+
+.li-tab {
   width: 240px;
 }
-.form .checkout .payment .payment__tab li a {
-  text-align: center;
-}
-.form .checkout .payment .payment__tab li a:not(.active) {
+
+.nav-link:not(:active) {
   border: 1px solid #acbdcd;
 }
-.form .checkout .payment .payment__tab-content .payment__tab-pane {
+
+.payment__tab-pane {
   min-height: 100px;
 }
-.form .checkout .payment .payment__tab-content .payment__form {
+
+.div_flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.form .checkout .payment .payment__tab-content .payment__form input {
+
+.div_grid {
+  display: grid;
+}
+
+.input {
   height: 35px;
   padding: 5px;
   outline: none;
 }
-.form .checkout .payment .payment__tab-content .payment__form label {
+
+.label {
   font-weight: bold;
 }
-.form .checkout .payment .payment__tab-content .payment__form label span {
+
+.label_span {
   margin-left: 5px;
   color: #ea7162;
 }
-.form .checkout .payment .payment__tab-content .payment__form .payment__input-icon {
+
+.payment__input_with_icon {
   border: 1px solid #acbdcd;
   padding: 1px;
   display: -webkit-box;
@@ -76,48 +83,42 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.form .checkout .payment .payment__tab-content .payment__form .payment__input-icon input {
+
+.input_with_icon {
   border: none;
   width: 100%;
 }
-.form .checkout .payment .payment__tab-content .payment__form .payment__form-inputs {
+
+.payment__form-inputs {
   width: 60%;
   margin-right: 20px;
   border: 1px solid #f2f2f2;
   border-radius: 0.25rem;
   padding: 30px 20px;
 }
-.form .checkout .payment .payment__tab-content .payment__form .payment__form-inputs .payment__form-input-valid-thru, .form .checkout .payment .payment__tab-content .payment__form .payment__form-inputs .payment__form-input-name {
-  display: grid;
-}
-.form .checkout .payment .payment__tab-content .payment__form .payment__form-inputs .payment__form-input-valid-thru input, .form .checkout .payment .payment__tab-content .payment__form .payment__form-inputs .payment__form-input-name input {
+
+.payment__input_without_icon {
   border: 1px solid #acbdcd;
 }
-.form .checkout .payment .payment__tab-content .payment__form .payment__form-inputs .payment__form-input-valid-thru input {
+
+.input-short {
   width: 50px;
 }
-.form .checkout .payment .payment__tab-content .payment__form .payment__form-code {
-  width: 15%;
-  padding: 30px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.form .checkout .payment .payment__tab-content .payment__form .payment__form-code .payment__input-icon-hint {
+
+.payment__input-icon-hint {
   position: relative;
   display: inline-block;
 }
-.form .checkout .payment .payment__tab-content .payment__form .payment__form-code .payment__input-icon-hint:hover .tooltip-content {
+
+.hint .hint--hover:hover .hint__content {
   display: block;
 }
-.form .checkout .payment .payment__tab-content .payment__form .payment__form-code .payment__input-icon-hint img {
+
+.icon-hint {
   margin-right: 5px;
 }
-.form .checkout .payment .payment__tab-content .payment__form .payment__form-code .payment__input-icon-hint .tooltip-content {
+
+.hint__content {
   display: none;
   width: 220px;
   background-color: rgba(0, 0, 0, 0.2);
@@ -128,7 +129,7 @@
   top: -50px;
   left: 120%;
 }
-.form .checkout .payment .payment__tab-content .payment__form .payment__form-code .payment__input-icon-hint .tooltip-content::after {
+.hint__content::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -138,17 +139,28 @@
   border-style: solid;
   border-color: transparent rgba(0, 0, 0, 0.2) transparent transparent;
 }
-.form .checkout .accept-agreements {
+
+.payment__form-code {
+  width: 105px;
+  padding: 30px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.accept-agreements {
   background-color: #fcfcfc;
   padding: 20px;
   margin-bottom: 30px;
   border: 1px solid #dce3ea;
   border-radius: 0.25em;
 }
-.form .checkout .accept-agreements label {
-  margin: 0px;
-}
-.form .checkout .place-order {
+
+.place-order {
   width: 100%;
   background-color: #ff5319;
   color: #ffff;
@@ -158,12 +170,27 @@
   outline: none;
   height: 55px;
 }
-.form .checkout .place-order:hover {
+.place-order:hover {
   opacity: 0.9;
+  color: white;
 }
 
-.terms-conditions .modal-body {
-  text-align: justify;
+.logo {
+  margin-bottom: 10%;
+}
+
+.payment {
+  margin-bottom: 30px;
+}
+
+.payment__tab {
+  margin-bottom: 20px;
+}
+
+.form {
+  max-width: 800px;
+  font-size: 18px;
+  padding: 10px 0px 60px 0px;
 }
 
 /*# sourceMappingURL=form.css.map */

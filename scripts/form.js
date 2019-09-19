@@ -6,6 +6,37 @@ class View {
   constructor() {
   }
  
+  _validFun(key, value){
+	 if(key == "month"){
+		 if(value > 13 || value <= 0){
+			 return false;
+		 }
+	 }
+	 
+	 let currentYear = parseInt(new Date().getFullYear().toString().substr(2,2));
+	 if(key == "year"){
+		 if(value > currentYear + 10 || value < currentYear){
+			 return false;
+		 }
+	 }
+	 
+	 let year = $(".payment__form-input-valid-thru #yy").val();
+	 let currentMonth = new Date().getMonth() + 1;
+	 if(key == "month" && !isNaN(year) && parseInt(year) == currentYear){
+		 if(value < currentMonth){
+			 return false;
+		 }
+	 }
+	 
+	 let month = $(".payment__form-input-valid-thru #mm").val();
+	 if(key == "year" && !isNaN(month) && !isNaN(year) && parseInt(year) == currentYear){
+		 if(month < currentMonth){
+			 return false;
+		 }
+	 }	 
+	 return true;
+  }
+ 
   onKeyPressNumberInput(key){
 	if(key!=" " && !isNaN(key)){
 		return;
@@ -24,11 +55,14 @@ class View {
 	event.preventDefault();
   }
   
-  onChangeNumberInput(element){
+  onChangeNumberInput(element, key){
+	  console.log("onChangeNumberInput ", key)
 	  let value = $(element).val();
 	  if((/\s?\d+\s?/).test(value)){
-		  $(element).val(value.trim());
-		  return;
+		if(key == "cvv" || this._validFun(key, parseInt(value))){
+			$(element).val(value.trim());
+			return;
+		} 
 	  }
 	  $(element).val("");
   }
@@ -52,7 +86,6 @@ class View {
   }
   
   calculationAmount(){
-	  console.log("load ",  $(".product__item-price"));
 	  let amount = 0;
 	  $(".product__item-price").each((i, item)=>{
 		 amount += Number($(item).text().replace("$", ""));
@@ -102,13 +135,13 @@ class View {
   
   bindOnChangeNumberInput(handler) {
 	$(".payment__form-code input").on('change', event=>{
-		handler(event.currentTarget);
+		handler(event.currentTarget, "cvv");
 	})
 	$(".payment__form-input-valid-thru #mm").on('change', event=>{
-		handler(event.currentTarget);
+		handler(event.currentTarget, "month");
 	})
 	$(".payment__form-input-valid-thru #yy").on('change', event=>{
-		handler(event.currentTarget);
+		handler(event.currentTarget, "year");
 	})
   }
   
@@ -149,8 +182,8 @@ class Controller {
 	  this.view.calculationAmount();
   }
   
-  onChangeNumberInput = (value) =>{
-	  this.view.onChangeNumberInput(value);
+  onChangeNumberInput = (value, validKey) =>{
+	  this.view.onChangeNumberInput(value, validKey);
   }
 }
 

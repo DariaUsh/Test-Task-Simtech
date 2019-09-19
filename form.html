@@ -10,38 +10,38 @@
 	</head>
 	<body>
 		<div class="form container">
-			<div class="logo">
+			<div class="logo text-center">
 				<img src="image/logo.jpg" alt="Logo" width="250"/>
 			</div>
 			<div class="checkout">
-				<h2>Checkout</h2>			
-				<div class="products">
-					<h3>Products</h3>
+				<h2 class="h2">Checkout</h2>			
+				<div class="products div_indent">
+					<h3 class="h3">Products</h3>
 					<div class="product__item row">
-						<div class="product__item-name col-10">
-						  <a href="#">Apple&#174; - iPad&#174; with Retina&#174; display Wi-Fi - 32GB - White</a>
+						<div class="product__item-name div text-left col-10">
+						  <a href="#" class="internal-intend-left">Apple&#174; - iPad&#174; with Retina&#174; display Wi-Fi - 32GB - White</a>
 						</div>
-						<div class="product__item-price col-2">
+						<div class="product__item-price div text-right col-2">
 						  $499.00
 						</div>
 					</div>
 					<div class="product__item row">
-						<div class="product__item-name col-10">
-						  <a href="#">16GB A Series Walkman Video MP3</a>
+						<div class="product__item-name div text-left col-10">
+						  <a href="#" class="internal-intend-left">16GB A Series Walkman Video MP3</a>
 						</div>
-						<div class="product__item-price col-2">
+						<div class="product__item-price div text-right col-2">
 						  $130.00
 						</div>
 					</div>
 				</div>	
 				
-				<div class="shipping">
-					<h3>Shipping method</h3>
+				<div class="shipping div div_indent">
+					<h3 class="h3">Shipping method</h3>
 				  <div class="shipping__item row">
-					<div class="product__item-name col-10">
-					  <span>FedEx</span>
+					<div class="product__item-name div text-left col-10">
+					  <span class="internal-intend-left">FedEx</span>
 					</div>
-					<div class="product__item-price col-2">
+					<div class="product__item-price div text-right col-2">
 					  $13.99
 					</div>
 				  </div>
@@ -51,47 +51,47 @@
 					<div class="payment">
 						<h3>Payment method</h3>	
 						<ul class="payment__tab nav nav-pills">
-							<li class="nav-item">
-								<a class="nav-link active" data-toggle="tab" href="#creditCard">Credit card</a>
+							<li class="li-tab nav-item">
+								<a class="nav-link active text-center" data-toggle="tab" href="#creditCard">Credit card</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" data-toggle="tab" href="#giftCard">Gift card</a>
+							<li class="li-tab nav-item">
+								<a class="nav-link text-center" data-toggle="tab" href="#giftCard">Gift card</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" data-toggle="tab" href="#payPal">PayPal</a>
+							<li class="li-tab nav-item">
+								<a class="nav-link text-center" data-toggle="tab" href="#payPal">PayPal</a>
 							</li>
 						</ul>				 
 						<div class="payment__tab-content tab-content">
 							<div class="payment__tab-pane tab-pane fade show active" id="creditCard">
-								<div class="payment__form">
+								<div class="payment__form div_flex">
 									<div class="payment__form-inputs">
 										<div class="payment__form-input-card-number">
-											<label>Card number<span>*</span></label>
-											<div class="payment__input-icon">
-												<input type="text" value="" maxlength="19" required/>
+											<label class="label">Card number<span class="label_span">*</span></label>
+											<div class="payment__input_with_icon">
+												<input class="input input_with_icon" type="text" value="" maxlength="19" required/>
 												<img src="image/icon.png" width="50"/>
 											</div>
 										</div>
-										<div class="payment__form-input-valid-thru">
-											<label>Valid thru (mm/yy)<span>*</span></label>
+										<div class="payment__form-input-valid-thru div_grid">
+											<label class="label">Valid thru (mm/yy)<span class="label_span">*</span></label>
 											<div>
-												<input type="text" id="mm" value="" maxlength="2" required/>
+												<input class="input payment__input_without_icon input-short" type="text" id="mm" value="" maxlength="2" required/>
 												<span>&nbsp;/&nbsp;</span>
-												<input type="text" id="yy" value="" maxlength="2" required/>
+												<input class="input payment__input_without_icon input-short" type="text" id="yy" value="" maxlength="2" required/>
 											</div>								
 										</div>
-										<div class="payment__form-input-name">
-											<label>Cardholder's name<span>*</span></label>
-											<input type="text" value="" required/>
+										<div class="payment__form-input-name div_grid">
+											<label class="label">Cardholder's name<span class="label_span">*</span></label>
+											<input class="input payment__input_without_icon" type="text" value="" required/>
 										</div>
 									</div>
 									<div class="payment__form-code">
-										<label>CVV/CVC<span>*</span></label>
-										<div class="payment__input-icon">
-											<input type="text"  maxlength="3" required/>
-											<div class="payment__input-icon-hint">
-												<img src="image/icon-hint.png" width="25"/>											
-												<div class="tooltip-content">
+										<label class="label">CVV/CVC<span class="label_span">*</span></label>
+										<div class="payment__input_with_icon hint">
+											<input class="input input_with_icon" type="text"  maxlength="3" required/>
+											<div class="payment__input-icon-hint hint--hover">
+												<img class="icon-hint" src="image/icon-hint.png" width="25"/>											
+												<div class="hint__content">
 													<img src="image/codeLoc.jpg" width='220' />
 												</div>
 											</div>										
@@ -106,7 +106,7 @@
 					
 					<div class="accept-agreements">
 						<input type="checkbox" required/>
-						<label>I accept the <a href="#">Terms and Conditions</a></label>
+						<span>I accept the <a href="#">Terms and Conditions</a></span>
 					</div>
 					
 					<button type="submit" class="place-order btn btn-lg">Place order</button>
@@ -123,7 +123,7 @@
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<div class="modal-body">
+					<div class="modal-body text-by-width">
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et libero mauris. Pellentesque facilisis et purus ut gravida. Nullam laoreet justo sit amet lorem dapibus, ac mattis dui euismod. Morbi ultrices aliquam ante nec sagittis. Vestibulum fringilla porttitor nisl, at fermentum sem convallis at. Phasellus sed purus tempus est convallis dictum. Curabitur pharetra sapien nec leo faucibus, ut aliquet arcu auctor. Aliquam lacus eros, pretium feugiat ullamcorper id, scelerisque non urna. Sed commodo, lorem vel pharetra eleifend, nisl sapien eleifend eros, vitae suscipit dolor libero in est. Nunc vel est pharetra, rutrum dolor non, feugiat tellus. Phasellus nec consequat nulla. Cras tempor sapien non enim aliquet sollicitudin. Ut posuere est elementum nisi dictum, vel consequat diam elementum. Aliquam erat volutpat. Pellentesque non arcu dolor. Morbi sit amet ligula non purus scelerisque maximus.
 						</p>
