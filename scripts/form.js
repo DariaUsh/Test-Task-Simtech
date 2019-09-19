@@ -7,8 +7,16 @@ class View {
   }
  
   _validFun(key, value){
+	 if(key == "cvv"){
+		 if(value.toString().length < 3){
+			 return false;
+		 }else{
+			 return true;
+		 }
+	 }	
+	 
 	 if(key == "month"){
-		 if(value > 13 || value <= 0){
+		 if(value > 12 || value <= 0){
 			 return false;
 		 }
 	 }
@@ -59,7 +67,7 @@ class View {
 	  console.log("onChangeNumberInput ", key)
 	  let value = $(element).val();
 	  if((/\s?\d+\s?/).test(value)){
-		if(key == "cvv" || this._validFun(key, parseInt(value))){
+		if(this._validFun(key, parseInt(value))){
 			$(element).val(value.trim());
 			return;
 		} 
