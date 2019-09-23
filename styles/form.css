@@ -84,9 +84,14 @@
           align-items: center;
 }
 
-.input_with_icon {
+.input_with_icon_long {
   border: none;
   width: 100%;
+}
+
+.input_with_icon_short {
+  border: none;
+  width: 75px;
 }
 
 .payment__form-inputs {
@@ -141,7 +146,7 @@
 }
 
 .payment__form-code {
-  width: 105px;
+  width: 13%;
   padding: 30px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
