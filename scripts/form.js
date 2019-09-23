@@ -66,7 +66,7 @@ class View {
   onChangeNumberInput(element, key){
 	  console.log("onChangeNumberInput ", key)
 	  let value = $(element).val();
-	  if((/\s?\d+\s?/).test(value)){
+	  if((/\d+/).test(value)){
 		if(this._validFun(key, parseInt(value))){
 			$(element).val(value.trim());
 			return;
@@ -77,7 +77,7 @@ class View {
   
   onChangeCreditCard(element){
 	let value = $(element).val();
-	if((/(\s?\d{4}\s\d{4}\s\d{4}\s\d{4}\s?)|(\s?\d+\s?)/).test(value) ){
+	if(value.length == 19 && (/(\d{4}\s\d{4}\s\d{4}\s\d{4})|(\d+)/).test(value) ){
 		let symbolsGroup = value.replace(/[^\d]/g, '').match(/\d{4}/g);
 		let formatStr = "";
 		for(let i=0; i<4; i++){
