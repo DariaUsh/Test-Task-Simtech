@@ -64,6 +64,14 @@
   outline: none;
 }
 
+.input:invalid {
+  box-shadow: none; 
+}
+
+.checkbox:invalid{
+	box-shadow: none; 
+}
+
 .label {
   font-weight: bold;
 }
