@@ -64,7 +64,6 @@ class View {
   }
   
   onChangeNumberInput(element, key){
-	  console.log("onChangeNumberInput ", key)
 	  let value = $(element).val();
 	  if(!isNaN(value)){
 		if(this._validFun(key, parseInt(value))){
