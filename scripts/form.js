@@ -30,14 +30,14 @@ class View {
 	 
 	 let year = $(".payment__form-input-valid-thru #yy").val();
 	 let currentMonth = new Date().getMonth() + 1;
-	 if(key == "month" && !isNaN(year) && parseInt(year) == currentYear){
+	 if(key == "month" && year.trim() != '' && !isNaN(year) && parseInt(year) == currentYear){
 		 if(value < currentMonth){
 			 return false;
 		 }
 	 }
 	 
 	 let month = $(".payment__form-input-valid-thru #mm").val();
-	 if(key == "year" && !isNaN(month) && !isNaN(year) && parseInt(year) == currentYear){
+	 if(key == "year" && month.trim() != '' && !isNaN(month) && !isNaN(year) && parseInt(year) == currentYear){
 		 if(month < currentMonth){
 			 return false;
 		 }
