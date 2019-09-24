@@ -76,11 +76,16 @@ class View {
   
   onChangeCreditCard(element){
 	let value = $(element).val();
-	if(value.length == 19 && (/(\d{4}\s\d{4}\s\d{4}\s\d{4})|(\d+)/).test(value) ){
+	if(value.length == 19 && (/(\d{4}\s\d{4}\s\d{4}\s\d{4})/).test(value) ){
 		let symbolsGroup = value.replace(/[^\d]/g, '').match(/\d{4}/g);
 		let formatStr = "";
 		for(let i=0; i<4; i++){
-			formatStr += symbolsGroup[i] + " ";
+			if(!isNaN(symbolsGroup[i])){
+				formatStr += symbolsGroup[i] + " ";
+			}else{
+				$(element).val("");
+				return;
+			}		
 		}
 		$(element).val(formatStr.trim());
 		return;
